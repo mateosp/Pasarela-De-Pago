@@ -1,0 +1,25 @@
+---
+const {total = '', name = '', description = '' } = Astro.props;
+---
+
+<button
+    class="epayco-button"
+    data-epayco-key="6ee156d92ad39058800d91c18b01b761"
+    data-epayco-amount={total}
+    data-epayco-name={name}
+    data-epayco-description={description}
+    data-epayco-currency="COP"
+    data-epayco-country="CO"
+    data-epayco-test="true"
+    data-epayco-external="false"
+    data-epayco-button="https://multimedia.epayco.co/dashboard/btns/btn1.png">
+</button>
+
+<script src="https://checkout.epayco.co/checkout.js" type="text/javascript"></script>
+
+
+<style>
+    button{
+        display: none;
+    }
+</style>
